@@ -1,0 +1,2 @@
+$attributes = new \stdClass();
+$attributes->id = 'deal_status'

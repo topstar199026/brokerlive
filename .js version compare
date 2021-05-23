@@ -1,0 +1,69 @@
+1:
+    theme 'js/plugins/jquery-ui/jquery-ui.min.js'
+    prev 'jquery-ui-1.12.1.min.js'
+
+2:
+    prev 'jquery.ui.touch-punch.min.js'
+
+3: bootstrap.js
+    theme 4.3.1
+    prev 3.3.7
+
+4:
+    prev 'parsley.min.js'
+
+5: moment.js
+    theme 2.9.0
+    prev 2.10.2
+    current 2.26.0
+
+6: jquery.metisMenu.js
+    theme 2.7.7
+    prev 1.1.3
+
+7: jquery.slimscroll.min.js
+    theme 1.3.6
+    prev 1.3.0
+
+8: pace.min.js
+    theme 1.0.2
+    prev 1.0.0
+
+9: 
+    prev 'bootstrap-datepicker.js'
+
+10: 
+    prev 'bootbox.js'
+
+11: toastr.min.js
+    theme 'none'
+    prev 'none'
+
+12: 
+    prev 'jquery.loading'
+
+13: 
+    prev 'charts/loader.js'
+
+14: 
+    prev 'datatables/sorting/datetime-moment.js'
+
+15: 
+    prev 'datatables.min.js'
+    prev 'datatables/plugins/buttons-1.5.1/js/dataTables.buttons.min.js'
+    prev 'datatables/plugins/buttons-1.5.1/js/buttons.jqueryui.min.js'
+    prev 'datatables/plugins/buttons-1.5.1/js/buttons.html5.min.js'
+    prev 'datatables/plugins/buttons-1.5.1/js/buttons.print.min.js'
+    prev 'datatables/plugins/jszip-2.5.0/jszip.min.js'
+
+16:
+    prev 'datatables/plugins/jszip-2.5.0/jszip.min.js'
+
+17:
+    prev 'datatables/plugins/pdfmake-0.1.32/pdfmake.min.js'
+    prev 'datatables/plugins/pdfmake-0.1.32/vfs_fonts.js'
+
+
+
+
+    

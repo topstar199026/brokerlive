@@ -1,0 +1,81 @@
+2020-06-16
+    1: https://momentjs.com/
+        'js/new_plugins/moment/moment.js'
+        version 2.26.0 (Current Inspinia theme moment version 2.9.0)
+    2: http://davidstutz.de/bootstrap-multiselect
+        'js/new_plugins/bootstrap-multiselect/bootstrap-multiselect.js'
+        'css/new_plugins/bootstrap-multiselect/bootstrap-multiselect.css'
+    3: https://select2.org/getting-started/installation
+        'js/new_plugins/select2/select2.js'
+        'css/new_plugins/select2/select2.css'
+        version 4.1.0-beta.1
+    4:
+        'js/plugins/jquery-ui/jquery.ui.touch-punch.min.js'
+        Add js from previous version
+    5: http://cdn.datatables.net/plug-ins/
+        'js/plugins/dataTables/datetime-moment.js'
+        Change new version
+        'datatables.min.js', 'dataTables.bootstrap4.min.js'
+        move theme stand js to  _theme folder
+
+        update datatable css
+        'css/plugins/datatables/datatables.min.css'
+
+2020-06-18
+    1:
+        'js/new_plugins/mustache/mustache.js'
+        Add js from previous version
+
+2020-06-19
+        'js/new_plugins/bootbox/bootbox.js'
+        Add js from previous version
+
+2020-06-20
+    1:
+        'js/new_plugins/flowjs/flow.js'
+        Add js from previous version
+    2:
+        'js\tinymce'
+        Add library from previous version
+    3:
+        'new_plugins\uri\uri'
+        Add library from previous version
+
+2020-06-27
+    1:
+        'js/plugins/infinite-scroll/infinite-scroll.pkgd.js'
+        Add js from previous version
+
+2020-06-29
+    1:
+        brokerlive.from.js
+        remove $('.datepicker').datepicker(datepickerOptions);
+
+2020-07-01
+    1:
+        brokerlive.widgetsplits.js
+        remove duplicate '&deal_id=' + encodeURIComponent($('#deal-id').val())
+
+2020-07-16
+    1:
+        https://www.gstatic.com/charts/loader.js
+        add loader.js to new_plugins
+    2:
+        add numeral.min.js to prev_plugin from previous version
+
+2020-08-27
+    1:
+        add fullcalendar.min.js to prev from previous version
+
+
+2020-09-22
+    1: php .ini memory_limit must increase 2G+
+        https://stackoverflow.com/questions/49212475/composer-require-runs-out-of-memory-php-fatal-error-allowed-memory-size-of-161
+        php artisan elastic:make:migration create_reminders
+        php artisan elastic:migrate
+        php artisan scout:import "App\Models\Deal"
+        php artisan scout:flush "App\Models\DealContact"
+
+2020-10-02
+    1: Add timer picker js
+        https://timepicker.co/

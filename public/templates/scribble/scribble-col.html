@@ -1,0 +1,37 @@
+<div class="scribble-list-col">
+    <div class="ibox">
+        <div class="ibox-content">
+            {{^category}}
+            <form action="category" method="post">
+                <div class="input-group">
+                    <input type="text" placeholder="New category name" class="input input-sm form-control" name="name" pattern=".{5,50}" required title="Please input 5 characters minimum">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-sm btn-primary ladda-button" data-action="save-category" data-style="expand-left"> <i class="fa fa-check"></i> Save</button>
+                    </span>
+                </div>
+            </form>
+            {{/category}}
+            {{#category}}
+            <h3 class="scribble-category-header editable-container">
+              <span data-pattern=".{5,50}" title="Invalid value" data-content="Please input 5 characters minimum" data-placement="bottom" class="value-container">{{name}}</span>
+              <a class="editable-trigger" data-action="inline-edit" data-entity="category" data-field="name" data-id="{{category.id}}" title="edit">
+                <i class="fa fa-pencil-square-o"></i>
+                <i class="fa fa-check-square-o"></i>
+                <i class="fa fa-close" data-cancel="true"></i>
+              </a>
+            </h3>
+            <form action="create" method="post">
+                <div class="input-group">
+                    <input type="text" placeholder="Add new note" class="input input-sm form-control" name="note" pattern=".{5,}" required title="Please input 5 characters minimum">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-sm btn-primary" data-action="add" data-category-id="{{category.id}}" data-style="expand-left"> <i class="fa fa-plus"></i> Add</button>
+                    </span>
+                </div>
+            </form>
+            <ul class="sortable-list connectList agile-list" id="scribble-list-{{category.id}}" data-category-id="{{category.id}}">
+
+            </ul>
+            {{/category}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+{{#scribbles}}
+<li class="warning-element scribble" id="scribble_{{id}}" data-scribble-id="{{id}}" data-category-id="{{category_id}}">
+    <div class="scrible-text editable-container">
+      <span data-pattern=".{5,50}" title="Invalid value" data-content="Please input 5 characters minimum" data-placement="bottom" class="value-container">{{note}}</span>
+      <a class="editable-trigger" data-action="inline-edit" data-entity="scribble" data-field="note" data-id="{{id}}" title="edit">
+        <i class="fa fa-pencil-square-o"></i>
+        <i class="fa fa-check-square-o"></i>
+        <i class="fa fa-close" data-cancel="true"></i>
+      </a>
+    </div>
+    <div class="agile-detail">
+        <form action="delete" method="delete">
+            <input type="hidden" name="id" value="{{id}}">
+            <button type="submit" class="pull-right btn btn-xs btn-white" data-action="delete" data-scribble-id="{{id}}" data-style="expand-top"><i class="fa fa-trash"></i> Delete</button>
+        </form>
+        <i class="fa fa-clock-o"></i> <span data-field="updated">{{updated}}</span>
+    </div>
+</li>
+{{/scribbles}}

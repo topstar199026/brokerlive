@@ -1,0 +1,975 @@
+/*
+Created on : 01/05/2014, 11:34:46 PM
+Author     : David Grinberg
+*/
+#page-wrapper {
+  padding-bottom: 45px;
+}
+#page-wrapper .wrapper-content .float-e-margins.ibox-dashboard h1 {
+  font-size: 30px;
+}
+.popover {
+  max-width: 100%;
+}
+/* Adding the percent char to font awesome */
+.fa-percent::before {
+  content: '%';
+  font-weight: bold;
+}
+/* chosen - multiselect */
+.brokerlive-form .chosen-container-multi .chosen-choices li.search-choice {
+  background: #f1f1f1;
+  border: 1px solid #ededed;
+  border-radius: 2px;
+  box-shadow: none;
+  color: #333333;
+  cursor: default;
+  line-height: 13px;
+  margin: 3px 0 3px 5px;
+  padding: 1px 20px 1px 5px;
+  position: relative;
+}
+.brokerlive-form .chosen-container-multi .chosen-choices li.search-field input[type="text"] {
+  height: 22px;
+  padding: 3px;
+}
+.brokerlive-form .note-editor .note-toolbar {
+  padding-top: 0px;
+}
+.brokerlive-form .note-editor .note-editor .btn-sm {
+  padding: 3px 6px;
+  font-size: 10px;
+}
+.brokerlive-form .row {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+.brokerlive-form [class^="col"] {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.brokerlive-form .checkbox-inline input[type=checkbox] {
+  position: static;
+  margin-left: 0px;
+}
+.brokerlive-form .input-group.date .input-group-addon i {
+  height: auto;
+  width: auto;
+}
+.brokerlive-form .input-error-msg {
+  color: #ed5565;
+}
+.brokerlive-modal .brokerlive-modal-error {
+  margin-top: 10px;
+}
+/* -------------------------------------------------------------------------- */
+/* Auto-complete control */
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  background: #FFF;
+  overflow: auto;
+}
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.autocomplete-selected {
+  background: #F0F0F0;
+}
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #3399FF;
+}
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+.toggle-form {
+  margin-bottom: 5px;
+}
+.reminder {
+  border-top: 1px solid #DDDDDD;
+  padding: 10px 12px;
+  clear: both;
+  min-height: 70px;
+}
+.reminder .reminder-body {
+  display: flex;
+  align-items: center;
+}
+.reminder .reminder-body .reminder-date {
+  color: #BBBBBB;
+  margin: 0;
+  width: 45px;
+}
+.reminder .reminder-body .reminder-date .day {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: -4px;
+}
+.reminder .reminder-body .reminder-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 1;
+  white-space: normal;
+  word-break: break-all;
+}
+.reminder .reminder-body .reminder-content p {
+  display: grid;
+}
+.reminder .reminder-body .reminder-actions {
+  width: 110px;
+}
+.reminder .reminder-body .notification-bell {
+  margin: 0;
+  font-size: 40px;
+  width: 45px;
+}
+.reminder .reminder-body .notification-content {
+  padding-left: 10px;
+  padding-right: 10px;
+  flex: 1;
+}
+.reminder .reminder-body .notification-actions {
+  width: 110px;
+}
+.reminder:first-child {
+  border-top: medium none;
+}
+/*
+-- PIPELINE --------------------------------------------------------------------
+*/
+.pipeline {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.pipeline .pipeline-col {
+  min-height: 1px;
+  width: 12%;
+}
+.pipeline .pipeline-col ul {
+  flex-grow: 1;
+  height: 100%;
+}
+.pipeline .pipeline-col ul li {
+  min-height: 40px;
+  box-sizing: content-box;
+}
+.pipeline .pipeline-col.collapsed div.pipeline-col-title div.content {
+  display: none;
+}
+.pipeline .pipeline-col.collapsed li a {
+  display: none;
+}
+.pipeline .pipeline-col.collapsed div.loading {
+  display: none;
+}
+.pipeline .pipeline-col .pipeline-col-title {
+  border-top: 1px solid #EEEEEE;
+  overflow: hidden;
+}
+.pipeline .pipeline-col .pipeline-col-title .content {
+  padding: 10px 18px;
+}
+.pipeline .pipeline-col .pipeline-col-title .content h3 {
+  font-weight: normal;
+  font-size: 13px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.2;
+}
+.pipeline .pipeline-col .pipeline-col-title .content .tools {
+  display: inline-block;
+  float: right;
+  margin-top: -3px;
+  position: relative;
+  padding: 0;
+}
+.pipeline .pipeline-col .pipeline-col-title .toggle {
+  font-weight: normal;
+  background-color: #EEEEEE;
+  padding: 8px 4px;
+  float: left;
+}
+.pipeline .pipeline-deal {
+  padding: 0;
+}
+.deal-card .reminder-icons {
+  float: right;
+}
+.deal-card a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.ibox-tools {
+  margin-top: -8px;
+}
+.ibox-tools a i.fa {
+  line-height: 20px;
+  padding: 7px 0px 5px 10px;
+}
+.ibox-tools .selectbox {
+  background: none repeat scroll 0 0 #fafafa;
+  color: #555;
+  border: 0;
+  border-left: 1px solid #ddd;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 7px 10px 5px;
+  vertical-align: middle;
+  margin: 0;
+}
+.ibox-tools .multiselect {
+  background: none repeat scroll 0 0 #fafafa;
+  border: 0;
+  line-height: 20px;
+  border-left: 1px solid #ddd;
+}
+.ibox-tools .btn:hover,
+.ibox-tools .btn:focus,
+.ibox-tools .btn:active,
+.ibox-tools .btn.active,
+.ibox-tools .open .dropdown-toggle.btn,
+.ibox-tools .btn {
+  background: none repeat scroll 0 0 #fafafa;
+  padding: 9px 10px 6px;
+  color: #555;
+  border-radius: 0;
+  border-left: 1px solid #ddd;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 12px;
+  line-height: 17px;
+  margin: 0;
+  -webkit-box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.8) inset;
+  box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.8) inset;
+}
+.ibox-tools a.btn i.fa {
+  line-height: normal;
+  padding: 0px;
+  font-size: 11px;
+}
+.selectbox {
+  background: #ffffff;
+  color: #333333;
+  padding: 8px;
+  line-height: 18px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-width: 0 1px 4px 1px;
+}
+.selectbox .caret {
+  position: relative;
+  top: -2px;
+}
+.selectbox span {
+  padding-left: 3px;
+}
+@keyframes pulse {
+  0% {
+    background-color: #FAFAFB;
+  }
+  100% {
+    background-color: #AFEEEE;
+  }
+}
+@keyframes pulse-danger {
+  0% {
+    background-color: #FAFAFB;
+  }
+  100% {
+    background-color: #f0b1af;
+  }
+}
+.pulsate-element {
+  animation: pulse 1s infinite;
+  animation-direction: alternate;
+}
+.pulsate-danger-element {
+  animation: pulse-danger 1s infinite;
+  animation-direction: alternate;
+}
+/*
+-- DEAL SUMMARY ----------------------------------------------------------------
+*/
+.deal-summary .row-deal-header {
+  background-color: #fff;
+  box-shadow: 2px 2px 1px #eeeeee;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+.deal-summary .row-deal-header .deal-name {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.deal-summary .row-deal-header .deal-name a {
+  float: left;
+  margin-left: 10px;
+}
+.deal-summary .row-deal-header .deal-name h1 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-top: 0px;
+  margin-bottom: 4px;
+  float: left;
+}
+.deal-summary .row-deal-header .deal-name p.broker-name {
+  margin: 0;
+  font-size: 12px;
+  color: #AAAAAA;
+  clear: both;
+}
+.deal-summary .notes-save .btn-savenote {
+  color: white;
+}
+.deal-summary .notes-save .btn-cancelnote {
+  color: #f0b1af;
+}
+.deal-summary .notes-save .btn-savenote:hover,
+.deal-summary .notes-save .btn-cancelnote:hover {
+  color: #23c6c8;
+}
+.deal-tools .tool {
+  margin: 1px;
+  float: right;
+}
+.deal-tools .tool .btn {
+  height: 30px;
+  padding: 5px 8px 4px 8px;
+  background-color: #fff;
+  border: 1px solid #E5E6E7;
+}
+.deal-tools .tool-status {
+  width: 150px;
+}
+.deal-tools .tool-linked {
+  width: 200px;
+}
+.deal-tools .tool-linked .button-text {
+  width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: middle;
+}
+.ibox.ibox-brokerlive {
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 1px #eeeeee;
+}
+.ibox.ibox-brokerlive .ibox-title {
+  background-color: #777a7c;
+  border: none;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding: 6px 10px;
+  min-height: 0px;
+}
+.ibox.ibox-brokerlive .ibox-title:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+.ibox.ibox-brokerlive .ibox-title h5 {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  text-overflow: ellipsis;
+  float: left;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 20px;
+}
+.ibox.ibox-brokerlive .ibox-title .tools {
+  float: right;
+}
+.label-brokerlive {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: inherit;
+  border: 1px solid #23c6c8;
+  color: #23c6c8;
+  padding: 1px 5px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.label-brokerlive.label-default {
+  color: #5e5e5e;
+  border-color: #5e5e5e;
+}
+.label-brokerlive.label-danger {
+  color: #ed5565;
+  border-color: #ed5565;
+}
+/*
+-- Collapsible Fieldset ----------------------------------------------------------------
+*/
+fieldset.collapsible {
+  border-top: 1px solid #D5D8D8;
+  margin-bottom: 5px;
+}
+fieldset.collapsible > legend {
+  margin-left: 10px;
+  padding: 0 10px;
+  font-size: 10px;
+  display: inline;
+  width: auto;
+  border: 0;
+  margin: 0;
+}
+fieldset.collapsible > div {
+  display: none;
+}
+/*
+-- REMINDERS -------------------------------------------------------------------
+*/
+tr.row-reminder td.reminder-actions {
+  text-align: center;
+}
+/*
+-- DEAL CONTACT LIST ----------------------------------------------------------------
+*/
+.contact-list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.contact-list li {
+  border-bottom: 1px solid #EEEEEE;
+  display: block;
+}
+.contact-list li div.contact {
+  height: 36px;
+}
+.contact-list li div.contact span.contact-delete {
+  padding: 7px 10px;
+  float: right;
+}
+.contact-list li div.contact span.contact-delete a {
+  color: #888888;
+}
+.contact-list li div.contact a.link-edit {
+  float: left;
+  color: #888888;
+  display: block;
+  padding: 7px 10px;
+}
+.contact-list li div.contact a.link-edit span {
+  color: #AAAAAA;
+  font-size: 11px;
+  font-style: italic;
+}
+.contact-list li div.contact a.link-edit i {
+  margin-left: 3px;
+  margin-right: 10px;
+  padding: 0px;
+  opacity: 0.6;
+  vertical-align: middle;
+}
+.contact-list li div.contact a:hover {
+  background-color: #FBFBFB;
+}
+.contact-list li div.contact i {
+  margin-right: 3px;
+  margin-left: 10px;
+  opacity: 0.6;
+  vertical-align: middle;
+}
+.contact-list li:last-child {
+  border-bottom: medium none;
+}
+/*
+-- CONTACT LIST ----------------------------------------------------------------
+*/
+/* CLIENTS */
+.client-detail {
+  position: relative;
+  height: 620px;
+}
+.client-link {
+  font-weight: 600;
+  color: inherit;
+}
+.client-link:hover {
+  color: inherit;
+}
+.client-avatar {
+  width: 42px;
+}
+.client-avatar img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+.contact-type {
+  width: 20px;
+  color: #c1c3c4;
+}
+.client-status {
+  text-align: left;
+}
+.client-detail .vertical-timeline-content p {
+  margin: 0;
+}
+.client-detail .vertical-timeline-icon.gray-bg {
+  color: #a7aaab;
+}
+.clients-list {
+  margin-top: 20px;
+}
+.clients-list table tr td {
+  height: 46px;
+  vertical-align: middle;
+  border: none ;
+}
+.clients-list .nav-tabs > li.active > a,
+.clients-list .nav-tabs > li.active > a:hover,
+.clients-list .nav-tabs > li.active > a:focus {
+  border-bottom: 1px solid #fff;
+}
+.clients-list .tab-pane {
+  position: relative;
+  min-height: 600px;
+  height: auto;
+}
+.clients-list .tab-content {
+  padding-top: 20px;
+}
+.clients-list .table-contact {
+  width: 100% !Important;
+}
+.clients-list .table-contact i {
+  margin-right: 5px;
+}
+.clients-list .table-responsive {
+  min-height: 600px;
+}
+.clients-list .dataTables_filter {
+  display: none !Important;
+}
+.contact-form .nav-tabs > li.active > a,
+.contact-form .nav-tabs > li.active > a:hover,
+.contact-form .nav-tabs > li.active > a:focus {
+  border-bottom: 1px solid #fff;
+}
+/*
+-- LOAN SPLITS -----------------------------------------------------------------
+*/
+.loan-split-list .loan-split {
+  border-bottom: 1px solid #EEEEEE;
+  padding: 7px 10px;
+}
+.loan-split-list .loan-split a {
+  color: #888888;
+}
+.loan-split-list .loan-split span.title {
+  font-weight: bold;
+}
+.loan-split-list .loan-split span.title span {
+  font-weight: normal;
+  color: #AAAAAA;
+  font-size: 11px;
+  font-style: italic;
+}
+.loan-split-list .loan-split label {
+  font-weight: normal;
+  color: #AAAAAA;
+}
+.loan-split-list .loan-split .form-actions {
+  padding: 10px 30px 10px 170px;
+}
+.applicant-item {
+  margin: 5px 0;
+}
+/*
+-- JOURNAL ENTRIES -------------------------------------------------------------
+*/
+.article-post > div.content {
+  margin-top: 6px;
+}
+.journal-element .journal-item-header .author {
+  float: left;
+}
+.journal-element .journal-item-header .journal-tags {
+  float: right;
+  cursor: pointer;
+}
+.journal-element .well {
+  white-space: normal;
+}
+.journal-element .well p {
+  display: grid;
+}
+.note-editor {
+  border: 1px solid #e5e6e7;
+}
+.note-editor .btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.note-editor .btn-default:hover,
+.note-editor .btn-default:focus,
+.note-editor .btn-default:active,
+.note-editor .btn-default.active,
+.note-editor .open .dropdown-toggle.btn-default {
+  background-color: #eee;
+  border-color: #bababa;
+}
+.journal-entry {
+  border-top: 1px solid #DDDDDD;
+  padding: 10px 12px;
+}
+.journal-entry:first-child {
+  border-top: medium none;
+}
+.journal-entry div {
+  float: left;
+}
+.journal-entry .journal-date {
+  color: #BBBBBB;
+  margin: 4px -2px 0 0;
+  text-align: center;
+  width: 30px;
+}
+.journal-entry .journal-date .day {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: -4px;
+}
+.journal-entry .journal-content {
+  width: 100px;
+}
+.widget-journal .ui-resizable-handle {
+  font-size: 12px;
+  text-align: center;
+  height: auto;
+}
+.widget-journal .widget-journal-content .journal-form {
+  display: none;
+}
+.widget-journal .widget-journal-content .journal-create {
+  margin-bottom: 15px;
+}
+.widget-journal .widget-journal-content .journal-wrapper {
+  overflow-y: auto;
+  height: 100%;
+}
+.widget-journal .widget-journal-content .journal-wrapper .feed-activity-list:first-child .journal-element:first-child {
+  margin-top: 0;
+}
+.widget-journal .widget-journal-content .journal-wrapper .journal-element {
+  margin-top: 15px;
+}
+.widget-journal .widget-journal-content .journal-wrapper .journal-element .journal-item-header .author {
+  float: left;
+}
+.widget-journal .widget-journal-content .journal-wrapper .journal-element .journal-item-header .journal-tags {
+  float: right;
+  cursor: pointer;
+}
+.widget-journal .widget-journal-content .journal-wrapper .journal-element .journal-tag-select {
+  width: 100%;
+}
+.widget-journal .widget-journal-content .journal-wrapper .journal-element .journal-end-list {
+  text-align: center;
+}
+.widget-journal .table-journal tr td {
+  white-space: normal;
+  word-break: break-all;
+}
+.dataTables_wrapper {
+  height: auto;
+}
+/*
+-- Profile -----------------------------------------------------------------
+*/
+.user-profile .profile-avatar {
+  text-align: center;
+}
+.user-profile .profile-roles {
+  text-align: center;
+  padding: 10px;
+}
+.user-profile .profile-start {
+  text-align: center;
+}
+.user-profile .profile-details {
+  clear: both;
+  padding: 4px;
+}
+.user-profile .profile-details .label {
+  float: left;
+  font-weight: bold;
+  text-align: right;
+  width: 110px;
+  padding-top: 4px;
+  font-size: 100%;
+  color: #666666;
+  white-space: nowrap;
+}
+.user-profile .profile-details .value {
+  margin-left: 120px;
+}
+.cloneStatus {
+  display: none;
+}
+/*
+-- Loan Split form -----------------------------------------------------------------
+*/
+div.loansplit-form div.row {
+  margin-left: -2px;
+  margin-right: -2px;
+}
+div.loansplit-form [class^="col"] {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+div.loansplit-form .checkbox-inline input[type=checkbox] {
+  position: static;
+  margin-left: 0px;
+}
+div.loansplit-form .datepicker {
+  padding: 0px;
+}
+div.loansplit-form .input-group.date .input-group-addon i {
+  height: auto;
+  width: auto;
+}
+/*
+-- Whiteboard -----------------------------------------------------------------
+*/
+table.table-whiteboard tbody tr th,
+table.table-whiteboard tbody tr td {
+  font-size: 90%;
+  padding: 4px;
+  white-space: nowrap;
+}
+table.table-whiteboard tbody tr td.borrower {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*
+-- SCRIBBLE --------------------------------------------------------------------
+*/
+.scribble-wrapper .scribble-search-box .btn-new-category {
+  margin-top: 15px;
+}
+.scribble-wrapper .scribble-list .scribble-list-col:first-child {
+  padding-left: 0;
+}
+.scribble-wrapper .scribble-list .scribble-list-col:last-child {
+  padding-right: 0;
+}
+.scribble-wrapper .scribble-list .scribble-list-col .ibox {
+  height: 100%;
+}
+.scribble-wrapper .scribble-list .scribble-list-col .ibox .ibox-content {
+  height: 100%;
+}
+.scribble-wrapper .scribble-list .scribble-list-col .sortable-list {
+  position: relative;
+  min-height: 80px;
+}
+.scribble-wrapper .scribble-list .scribble-list-col .sortable-list:after {
+  content: "Drag here";
+  display: block;
+  color: #ccc;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  border: 2px dotted #ccc;
+  box-sizing: border-box;
+}
+.scribble-wrapper .scribble-list .scribble-list-col .sortable-list .scribble.glowing {
+  box-shadow: 0 0 10px #ed5565;
+}
+@media (min-width: 1200px) {
+  .scribble-wrapper .scribble-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .scribble-wrapper .scribble-list .scribble-list-col {
+    flex: 1;
+    padding: 0 10px;
+  }
+}
+.scribble-wrapper .editable-container a.editable-trigger {
+  margin-left: 5px;
+}
+.scribble-wrapper .editable-container a.editable-trigger .fa-pencil-square-o {
+  display: inline-block;
+}
+.scribble-wrapper .editable-container a.editable-trigger .fa-check-square-o {
+  display: none;
+  color: #d58512;
+}
+.scribble-wrapper .editable-container a.editable-trigger .fa-close {
+  display: none;
+  margin-left: 4px;
+}
+.scribble-wrapper .editable-container .value-container {
+  padding: 1px 2px;
+}
+.scribble-wrapper .editable-container .value-container[contenteditable="true"] {
+  border: 1px solid #ed5565;
+}
+.scribble-wrapper .editable-container .value-container[contenteditable="true"] + a .fa-pencil-square-o {
+  display: none;
+}
+.scribble-wrapper .editable-container .value-container[contenteditable="true"] + a .fa-check-square-o {
+  display: inline-block;
+}
+.scribble-wrapper .editable-container .value-container[contenteditable="true"] + a .fa-close {
+  display: inline-block;
+}
+/*
+-- CALENDAR --------------------------------------------------------------------
+*/
+.calendar-content .spinner {
+  display: none;
+}
+.calendar-content.loading .spinner {
+  display: block;
+}
+.calendar-content .fc-event {
+  background-color: transparent;
+  color: #777;
+  padding: 3px;
+}
+.calendar-content .fc-event:hover {
+  color: #000;
+}
+.calendar-content .fc-event.overdue {
+  color: #ed5565;
+}
+.calendar-content .fc-event.overdue:hover {
+  color: darkred;
+}
+.calendar-content .event-tag {
+  min-width: 50px;
+  display: inline-block;
+}
+/*
+-- NESTED REFERRER
+*/
+.reports-wrapper .report-table {
+  margin-top: 15px;
+  width: 100%;
+}
+.reports-wrapper .report-table .details-control {
+  min-width: 5%;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+.reports-wrapper .report-table .details-control .fa-plus-circle {
+  color: #3399FF;
+}
+.reports-wrapper .report-table .details-control .fa-plus-circle:hover {
+  color: #23c6c8;
+}
+.reports-wrapper .report-table .details-control .fa-minus-circle {
+  display: none;
+}
+.reports-wrapper .report-table .details-control .fa-minus-circle:hover {
+  color: #333;
+}
+.reports-wrapper .report-table .details-control.expanded .fa-plus-circle {
+  display: none;
+}
+.reports-wrapper .report-table .details-control.expanded .fa-minus-circle {
+  display: inline-block;
+}
+.reports-wrapper .report-table .report-child-table {
+  width: 97%;
+  margin-left: 3%;
+  padding: 15px;
+  background: #f3f3f3;
+}
+.reports-wrapper .report-table .report-child-table.bg-white {
+  background: white;
+}
+.reports-wrapper .report-table .report-child-table td {
+  border-bottom: 1px solid #23c6c8;
+  padding: 10px 0;
+}
+.reports-wrapper .report-table .nested-report-container {
+  padding: 15px;
+  background: #f3f3f3;
+}
+.reports-wrapper .report-table .nested-referrer-details {
+  padding: 10px 0;
+  background: #E5E6E7;
+}
+.reports-wrapper .report-table .nested-referrer-details::before {
+  content: '- ';
+}
+.reports-wrapper .report-table .nested-referrer-details .branch-value {
+  margin-left: 15px;
+}
+.reports-wrapper .report-table .nested-referrer {
+  width: 97%;
+  margin-left: 3%;
+}
+.reports-wrapper .level-spacer {
+  background-color: lightgray;
+  min-width: 3%;
+  display: inline-block;
+  border-right: 1px solid white;
+}
+.reports-wrapper .referrer-node {
+  font-weight: bold;
+}
+.reports-wrapper .refresh-status {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.reports-wrapper .report-filter {
+  margin: 15px 0;
+}
+.reports-wrapper .report-filter label {
+  margin-right: 15px;
+}
+.reports-wrapper .report-filter label:first-child {
+  margin-left: 15px;
+}
+.reports-wrapper .report-filter input {
+  margin-right: 5px;
+}
+.reports-wrapper .report-search {
+  font-weight: normal;
+  margin: 10px 0;
+}
+.reports-wrapper .report-search input {
+  margin-left: 15px;
+}
+.nested-referrer-tree-details {
+  margin-left: 15px;
+  border: 1px solid #ed5565;
+}
+.report-refresh-action i {
+  pointer-events: none;
+}
+.report-refresh-action.loading {
+  background: url(../../img/spinner.gif) no-repeat center center;
+}
+.report-refresh-action.loading i {
+  visibility: none;
+}

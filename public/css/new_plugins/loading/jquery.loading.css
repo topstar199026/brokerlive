@@ -1,0 +1,36 @@
+.ajax-mask {
+    background: none;
+}
+.ajax-mask.mask{
+    background:rgb(190,190,190);  
+    background: transparent\9;  
+    background:rgba(190,190,190,0.4);  
+}
+.ajax-mask .loading {
+    width: 70px;
+    height: 80px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    position: relative;
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    background-color: #333333;
+    margin-top: -25px;
+    opacity: 0.9;
+    -moz-opacity: 0.9;
+}
+.ajax-mask .loading .loading-spinner {
+    color: #ffffff;
+    font-size: 30px;
+    padding-top: 7px;
+    padding-left: 20px;
+}
+.ajax-mask .loading .label {
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+}
